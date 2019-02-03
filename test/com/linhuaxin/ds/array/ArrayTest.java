@@ -1,6 +1,6 @@
-package com.linhuaxin.ds;
+package com.linhuaxin.ds.array;
 
-public class Main {
+public class ArrayTest {
 
     public static void main(String[] args) {
 

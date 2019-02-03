@@ -1,4 +1,4 @@
-package com.linhuaxin.ds;
+package com.linhuaxin.ds.stack;
 
 public interface Stack<E> {
 

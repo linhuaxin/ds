@@ -1,4 +1,4 @@
-package com.linhuaxin.ds;
+package com.linhuaxin.ds.array;
 
 public class Array<E> {
 
@@ -57,6 +57,14 @@ public class Array<E> {
             throw new IllegalArgumentException("Get failed. Index is illegal.");
         }
         return data[index];
+    }
+
+    public E getFirst() {
+        return get(0);
+    }
+
+    public E getLast() {
+        return get(size - 1);
     }
 
     public void set(int index, E e) {
