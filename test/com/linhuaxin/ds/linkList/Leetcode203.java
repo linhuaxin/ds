@@ -1,4 +1,4 @@
-package com.linhuaxin.ds.link;
+package com.linhuaxin.ds.linkList;
 
 public class Leetcode203 {
 
@@ -26,5 +26,21 @@ public class Leetcode203 {
         }
 
         return head;
+    }
+
+    public ListNode removeElements2(ListNode head, int val) {
+        ListNode dummyHead = new ListNode(-1);
+        dummyHead.next = head;
+
+        ListNode prev = dummyHead;
+        while (prev.next != null) {
+            if (prev.next.val == val) {
+                prev.next = prev.next.next;
+            } else {
+                prev = prev.next;
+            }
+        }
+
+        return dummyHead.next;
     }
 }

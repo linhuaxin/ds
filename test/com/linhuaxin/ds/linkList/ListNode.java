@@ -1,4 +1,4 @@
-package com.linhuaxin.ds.link;
+package com.linhuaxin.ds.linkList;
 
 public class ListNode {
     int val;
