@@ -1,4 +1,4 @@
-package com.linhuaxin.ds.linkList;
+package com.linhuaxin.ds.linkedList;
 
 public class Leetcode203 {
 
