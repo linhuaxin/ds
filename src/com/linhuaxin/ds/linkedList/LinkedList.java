@@ -104,6 +104,35 @@ public class LinkedList<E> {
         cur.e = e;
     }
 
+    // 从链表中删除index位置的元素，返回删除的元素
+    public E remove(int index) {
+        if (index < 0 || index > size) {
+            throw new IllegalArgumentException("Remove failed. Illegal index.");
+        }
+
+        Node prev = dummyHead;
+        for (int i = 0; i < index; i++) {
+            prev = prev.next;
+        }
+
+        Node retNode = prev.next;
+        prev.next = retNode.next;
+        retNode.next = null;
+        size--;
+
+        return retNode.e;
+    }
+
+    // 从链表中删除第一个元素，返回删除的元素
+    public E removeFirst() {
+        return remove(0);
+    }
+
+    // 从链表中删除最后的元素，返回删除的元素
+    public E removeLast() {
+        return remove(size - 1);
+    }
+
     // 查找链表中是否有元素e
     public boolean contains(E e) {
         Node cur = dummyHead.next;
