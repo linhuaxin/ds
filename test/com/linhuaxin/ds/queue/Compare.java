@@ -26,6 +26,6 @@ public class Compare {
 
         LoopQueue<Integer> loopQueue = new LoopQueue<>();
         double time2 = testQueue(loopQueue, opCount);
-        System.out.println("time2, time: " + time2 + "s");
+        System.out.println("LoopQueue, time: " + time2 + "s");
     }
 }
