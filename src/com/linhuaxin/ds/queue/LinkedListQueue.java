@@ -1,7 +1,5 @@
 package com.linhuaxin.ds.queue;
 
-import com.linhuaxin.ds.linkedList.LinkedList;
-
 public class LinkedListQueue<E> implements Queue<E> {
 
     private class Node {

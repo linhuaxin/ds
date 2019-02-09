@@ -43,4 +43,28 @@ public class Leetcode203 {
 
         return dummyHead.next;
     }
+
+    public ListNode removeElements3(ListNode head, int val) {
+        if (head == null) {
+            return null;
+        }
+
+        head.next = removeElements3(head.next, val);
+        return head.val == val ? head.next : head;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {1, 2, 6, 3, 4, 5, 6};
+        ListNode head = new ListNode(nums);
+        System.out.println(head);
+
+        ListNode res = new Leetcode203().removeElements(head, 6);
+        System.out.println(res);
+
+        ListNode res2 = new Leetcode203().removeElements2(head, 6);
+        System.out.println(res2);
+
+        ListNode res3 = new Leetcode203().removeElements3(head, 6);
+        System.out.println(res3);
+    }
 }
