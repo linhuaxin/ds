@@ -76,10 +76,37 @@ public class BST<E extends Comparable<E>> {
         if (node == null) {
             return;
         }
-
         System.out.println(node.e);
         preOrder(node.left);
         preOrder(node.right);
+    }
+
+    // 二分搜索树的中序遍历
+    public void inOrder() {
+        inOrder(root);
+    }
+
+    private void inOrder(Node node) {
+        if (node == null) {
+            return;
+        }
+        inOrder(node.left);
+        System.out.println(node.e);
+        inOrder(node.right);
+    }
+
+    // 二分搜索树的后序遍历
+    public void postOrder() {
+        postOrder(root);
+    }
+
+    private void postOrder(Node node) {
+        if (node == null) {
+            return;
+        }
+        postOrder(node.left);
+        postOrder(node.right);
+        System.out.println(node.e);
     }
 
     @Override
