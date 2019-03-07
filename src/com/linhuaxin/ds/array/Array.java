@@ -142,7 +142,6 @@ public class Array<E> {
             }
         }
         res.append("]");
-
         return res.toString();
     }
 
